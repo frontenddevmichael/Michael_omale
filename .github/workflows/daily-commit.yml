@@ -10,15 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Update log
         run: |
           echo "Update: $(date -u)" >> activity.log
-
       - name: Commit and push
         run: |
           git config user.name "frontenddevmichael"
-          git config user.email "omalemcmails@gmail.com"
+          git config user.email "frontenddevmichael@gmail.com"
           git add activity.log
           git commit -m "Daily update"
           git push
